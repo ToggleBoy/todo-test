@@ -9,7 +9,6 @@ const ToDoDetails = ({ todo, onOpen }) => {
     onOpen()
   } 
 
-
   return (
     <li>
       <div onClick={editOpenHandler} className="title">

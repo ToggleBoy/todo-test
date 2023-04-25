@@ -5,14 +5,14 @@ import { ToDoContext } from "../../contexts/ToDoContext";
 import Modal from "../UI/Modal";
 
 const EditTodo = ({ onClose }) => {
-  const { saveEdit, passEdit } = useContext(ToDoContext);
-  const [title, setTitle] = useState(passEdit.map(todo => todo.title));
+  const { saveEdit, selectEdit } = useContext(ToDoContext);
+  const [title, setTitle] = useState(selectEdit.title);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     onClose();
     if (title !== "") {
-      saveEdit(passEdit.map(todo => todo.id),title);
+      saveEdit(selectEdit.id,title);
       onClose();
     }
     setTitle("");

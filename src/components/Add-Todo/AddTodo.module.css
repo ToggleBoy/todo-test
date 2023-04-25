@@ -3,7 +3,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%;
+  width: 60%;
+  height: auto;
   /* background-color: #6d3d6d; */
   padding: 1rem;
   border-radius: 14px;
@@ -11,6 +12,24 @@
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
   /* display: flex; */
+}
+
+@media (max-width: 600px) {
+  .modal {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-1);
+  }
 }
 
 .mainmodal {
@@ -30,11 +49,12 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  border-bottom: 1px solid gray;
 }
 
 .row2 {
   width: 100%;
-  margin-top: 1rem;
+  margin-bottom: 5%;
 }
 
 .row3 {
@@ -45,15 +65,13 @@
 
 .text {
   width: 100%;
-  height: 30vh;
+  height: 10vh;
   padding: 0% 3%;
+  margin-bottom: 1%;
   box-sizing: border-box;
-  margin: 1% 0% 0%;
   background: #3c1f3c;
   color: #fff;
   border: none;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
   outline: none;
   font-size: 1.2rem;
   font-family: "Roboto", sans-serif;
@@ -61,7 +79,7 @@
 
 .button {
   width: auto;
-  padding: 3%;
+  padding: 3% 3% 1%;
   box-sizing: border-box;
   margin: 1% 1%;
   background: #3c1f3c;
@@ -74,4 +92,23 @@
 
 .button:hover {
   transform: scale(1.1);
+}
+
+.listbox {
+  margin: 0% 3%;
+}
+
+.listbox .button {
+  padding: 3% 0%;
+}
+
+.listbox_text {
+  width: auto;
+  padding-left: 1%;
+  background: #3c1f3c;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
 }
