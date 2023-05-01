@@ -11,7 +11,8 @@ const ToDOContextProvider = (props) => {
   const addTodo = (title) => {
     // used in addtodo
     // to add the todo to list
-    setTodoList([...todolist, { title, id: uuidv4() }]);
+    setTodoList([...todolist, { title, subList: storeCheckList, id: uuidv4() }]);
+    setStoreCheckList([])
   };
   const removeTodo = (id) => {
     // used in todoshowdetails

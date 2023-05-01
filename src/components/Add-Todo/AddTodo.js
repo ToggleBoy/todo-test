@@ -4,7 +4,7 @@ import style from "./AddTodo.module.css";
 import { ToDoContext } from "../../contexts/ToDoContext";
 import Modal from "../UI/Modal";
 import AddContentList from "./AddContentList";
-import DisplayContentList from "./DisplaycontentList";
+import DisplayContentList from "./DisplayContentList";
 
 const AddTodo = ({ onClose }) => {
   const { addTodo } = useContext(ToDoContext);

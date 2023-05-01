@@ -18,14 +18,17 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 1% 2%;
-  text-align: center;
+  place-items: center;
   background: #6d3d6d
 }
 
 @media screen and (max-width: 500px) {
+  .App {
+    margin: 0% 0%;
+    height: 100vh;
+  }
   .navbar {
     display: flex;
-    flex-direction: column;
     padding: 1% 5%;
   }
 }
@@ -47,8 +50,18 @@ body {
   border-radius: 4px;
   cursor: pointer;
   margin: 1% 0;
-  display: flex;
+  padding: 2%;
   /* justify-content: space-between; */
+}
+
+.displaylist-header {
+  display: flex;
+}
+
+.displaylist-content{
+  /* display: flex; */
+  padding: 0% 2%;
+  color: #fff;
 }
 
 .todo-list li:hover{

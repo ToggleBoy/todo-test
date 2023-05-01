@@ -5,18 +5,22 @@ const ToDoDetails = ({ todo, onOpen }) => {
   const { removeTodo, editTodo } = useContext(ToDoContext);
 
   const editOpenHandler = () => {
-    editTodo(todo.id)
-    onOpen()
-  } 
+    editTodo(todo.id);
+    onOpen();
+  };
 
   return (
     <li>
-      <div onClick={editOpenHandler} className="title">
-        {todo.title}
+      <div className="displaylist-header">
+        <div onClick={editOpenHandler} className="title">
+          {todo.title}
+        </div>
+        <div className="delete" onClick={() => removeTodo(todo.id)}>
+          🗑️
+        </div>
       </div>
-      <div className="delete" onClick={() => removeTodo(todo.id)}>
-        🗑️
-      </div>
+      {todo.subList.map((text) => <div onClick={editOpenHandler} className="displaylist-content">{text}</div>)}
+      
     </li>
   );
 };
